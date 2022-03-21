@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  height: 100%;
+}
+
+@-webkit-keyframes move {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0.1;
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes move {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0.1;
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@media (min-width: 375px) {
+  body {
+    margin: 1rem;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(160deg, #af67e9, #6565e7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  body article {
+    background-size: 55%;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 6%;
+    border-radius: 20px;
+    background-color: white;
+    width: 100%;
+    height: 70vh;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 1rem;
+    padding-top: 6rem;
+    padding-bottom: 0.5rem;
+  }
+  body article .box-illustration {
+    position: relative;
+  }
+  body article .box-illustration .illustration {
+    top: -8rem;
+    left: 5.5rem;
+    width: 50%;
+    position: absolute;
+  }
+  body article h1 {
+    margin: 1rem;
+    font-size: 26px;
+    margin-bottom: 1rem;
+  }
+  body article .box-questions div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0.3rem;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+  }
+  body article .box-questions div span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0.5rem;
+    cursor: pointer;
+  }
+  body article .box-questions div span img {
+    width: 0.6rem;
+    height: 0.6rem;
+    position: relative;
+    cursor: pointer;
+  }
+  body article .box-questions div span .rotateImg {
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  body article .box-questions div span:hover {
+    color: var(--Soft-red);
+  }
+  body article .box-questions div small {
+    margin: 0.1rem;
+    visibility: hidden;
+  }
+  body article .box-questions div .active {
+    -webkit-animation: move 2s;
+            animation: move 2s;
+    visibility: visible;
+  }
+}
+
+@media (min-width: 1366px) {
+  body {
+    overflow: hidden;
+    height: 100vh;
+  }
+  body article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-size: 40%;
+    background-position-x: -5%;
+    background-position-y: 75%;
+    padding-top: 4rem;
+    padding-bottom: 5.5rem;
+    width: 90%;
+    height: 70vh;
+  }
+  body article .box {
+    position: absolute;
+    top: 18rem;
+    left: 1rem;
+    z-index: 1;
+  }
+  body article .box-illustration {
+    background-image: url(/images/illustration-woman-online-desktop.svg);
+    background-size: 80%;
+    background-position: -45% 35%;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+  }
+  body article .box-illustration .illustration {
+    display: none;
+  }
+  body article .box-questions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 45%;
+    margin: 1.5rem;
+  }
+  body article .box-questions div span {
+    font-size: 18px;
+  }
+  body article .box-questions div small {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    height: 100vh;
+  }
+  body article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-size: 40%;
+    background-position-x: -5%;
+    background-position-y: 68%;
+    padding-top: 4rem;
+    padding-bottom: 3.5rem;
+    width: 90%;
+    height: 70vh;
+  }
+  body article .box {
+    position: absolute;
+    top: 18.1rem;
+    left: 1.2rem;
+    z-index: 1;
+  }
+  body article .box-illustration {
+    background-image: url(/images/illustration-woman-online-desktop.svg);
+    background-size: 80%;
+    background-position: -42% 15%;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+  }
+  body article .box-illustration .illustration {
+    display: none;
+  }
+  body article .box-questions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 45%;
+  }
+  body article .box-questions div span {
+    font-size: 18px;
+  }
+  body article .box-questions div small {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

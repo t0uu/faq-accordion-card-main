@@ -1,0 +1,232 @@
+// ## Typography
+// Family [Kumbh Sans]
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+// font-family: 'Kumbh Sans', sans-serif;
+
+
+// ## Colors
+:root {
+    // ### Primary
+    // #### Text
+
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+
+    // #### Gradient
+
+    // Background gradient:
+
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    // ### Neutral
+
+    // #### Text
+
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+
+    // #### Dividers
+
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    height: 100%;
+}
+
+@keyframes move {
+    to{
+        opacity: 1;
+    }
+    from{
+        opacity: 0.1;
+        transition: 2s;
+        transform: translateY(-10px);
+    }
+}
+
+@media(min-width: 375px){
+    body{
+        margin: 1rem;
+        background: -webkit-linear-gradient(160deg, #af67e9,#6565e7);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(160deg, #af67e9,#6565e7);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                               
+        article{
+            background-size: 55%;
+            background-image: url(./images/bg-pattern-mobile.svg);
+            background-repeat: no-repeat;
+            background-position-x: 50%;
+            background-position-y: 6%;
+            border-radius: 20px;
+            background-color: white;
+            width: 100%;
+            height: 70vh;
+            align-self: center;
+            margin: 1rem;
+            padding-top: 6rem;
+            padding-bottom: 0.5rem;
+            .box-illustration{
+                position: relative;
+               .illustration{
+                    top: -8rem;
+                    left:5.5rem;
+                    width: 50%;
+                    position:absolute;
+                }
+            }
+            h1{
+                margin: 1rem;
+                font-size: 26px;
+                margin-bottom: 1rem;
+            }
+            .box-questions{
+
+            div{
+                display: flex;
+                flex-direction: column;
+                margin: 0.3rem;
+                border-bottom: 1px solid var(--Light-grayish-blue);
+                span{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0.5rem;
+                    cursor: pointer;
+                    img{
+                        width: 0.6rem;
+                        height: 0.6rem;
+                        position: relative;
+                        cursor: pointer;
+
+                    }
+                    .rotateImg{
+                        transition: 1s;
+                        transform: rotate(180deg);
+                    }
+                    &:hover{
+                        color: var(--Soft-red);
+                    }
+                }
+                small{
+                    margin: 0.1rem;
+                    visibility: hidden;
+                }                
+                .active{
+                    animation: move 2s;
+                    visibility: visible
+                }
+            }
+        }
+
+        }
+    }
+}
+@media(min-width: 1366px){
+    body{
+        overflow: hidden;
+        height: 100vh;
+        article{
+            display: flex;
+            flex-direction: row;
+            background-size: 40%;
+            background-position-x: -5%;
+            background-position-y: 75%;
+            padding-top: 4rem;
+            padding-bottom: 5.5rem;
+            width: 90%;
+            height: 70vh;
+            .box{
+                position: absolute;
+                top: 18rem;
+                left: 1rem;
+                z-index: 1;
+            }
+            .box-illustration{
+                .illustration{
+                    display: none;
+                }
+                background-image: url(/images/illustration-woman-online-desktop.svg);
+                background-size: 80%;
+                background-position: -45% 35%;
+                background-repeat: no-repeat;
+                width: 50%;
+                height: 100%;       
+            }
+            .box-questions{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 45%;
+                margin: 1.5rem;
+                div{
+                    span{
+                        font-size: 18px;
+                    }
+                    small{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        }
+}
+@media(min-width:1440px){
+    body{
+height: 100vh;
+article{
+    display: flex;
+    flex-direction: row;
+    background-size: 40%;
+    background-position-x: -5%;
+    background-position-y: 68%;
+    padding-top: 4rem;
+    padding-bottom: 3.5rem;
+    width: 90%;
+    height: 70vh;
+    .box{
+        position: absolute;
+        top: 18.1rem;
+        left:1.2rem;
+        z-index: 1;
+    }
+    .box-illustration{
+        .illustration{
+            display: none;
+        }
+        background-image: url(/images/illustration-woman-online-desktop.svg);
+        background-size: 80%;
+        background-position: -42% 15%;
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 100%;       
+    }
+    .box-questions{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45%;
+        div{
+            span{
+                font-size: 18px;
+            }
+            small{
+                font-size: 14px;
+            }
+        }
+    }
+}
+}
+}
